@@ -1,0 +1,433 @@
+@import "./var.scss";
+@import "./switchModeBTN.scss";
+*,
+*::before,
+*::after {
+    font-family: $font;
+    box-sizing: border-box;
+    margin: 0;
+}
+body {
+    width: 100vw;
+    padding: 2rem;
+    .container {
+        width: 100%;
+        position: relative;
+        
+        header {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: .5rem;
+            width: 100%;
+            min-height: 20vh;
+            
+            .header--title {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                flex-grow: 1;
+                border-bottom: 1px solid gray;
+                
+                h1 {
+                    font-size: 1.525rem;
+                }
+                h2 {
+                    font-size: .9rem;
+                    color: $text-W;
+                }
+            }
+            .header--btn {
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                flex-grow: 2;
+                
+                h2 {
+                    font-size: .825rem;
+                    color: $text-W;
+                    flex-grow: 1;
+                }
+                .btn{
+                    flex-grow: 1;
+                    display: flex;
+                    justify-content: flex-end;
+                }
+            }
+        }
+        main {
+            .total-stats {
+                width: 100%;
+                display: flex;
+                flex-wrap: wrap;
+                .card {
+                    width: 100%;
+                    min-height: 30vh;
+                    flex-grow: 1;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-evenly;
+                    align-items: center;
+                    border-radius: .225rem;
+                    background-color: $CardBG-W;
+                    margin-bottom: 2rem;
+                    .card--name {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        
+                        img {
+                            width: 1.5rem;
+                            margin-right: .5rem;
+                        }
+                        span{
+                            font-size: .825rem;
+                            font-weight: 800;
+                            color: $text-W;
+                        }
+                    }
+                    .card--folowrs{
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        
+                        p {
+                            font-size: 3.5rem;
+                            font-weight: 800;
+                            color: $bText-W;
+                        }
+                        h3{
+                            text-transform:uppercase;
+                            font-weight: 400;
+                            font-size: 1rem;
+                            letter-spacing: 0.225rem;
+                            color: $text-W;
+                        }
+                    }
+                    .card--today{
+                        img {
+                            width: .725rem;
+                        }
+                        span {
+                            font-size: .725rem;
+                            font-weight: 800;
+                            color: $limeGreen;
+                        }
+                    }
+                    &:first-of-type {
+                        border-top: $fb 5px solid;
+                    }
+                    &:nth-of-type(2){
+                        border-top: $tw 5px solid;
+                    }
+                    &:nth-of-type(3){
+                        border-top: hsl(329, 70%, 58% ) 5px solid;
+                    }
+                    &:nth-of-type(4){
+                        border-top: $yt 5px solid;
+                        .card--today {
+                            span {
+                                color: $brightRed;
+                            }
+                        }
+                    }
+                }
+            }
+            .overview-today {
+                width: 100%;
+                display: flex;
+                flex-wrap: wrap;
+                margin-top: 2rem;
+                
+                .overview-today__title {
+                    margin-bottom: 2.5rem;
+                    h2 {
+                        color: $text-W;
+                    }
+                }
+                .overview-today__cards {
+                    display: flex;
+                    flex-wrap: wrap;
+                    
+                    .overview-today__cards--card {
+                        width: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        margin-bottom: 3.5rem;
+                        background-color: $CardBG-W;
+                        border-radius: .225rem;
+                        padding: 1rem;
+                        .overview-today__cards--title {
+                            display: flex;
+                            justify-content: space-between;
+                            margin-bottom: 1.5rem;
+                            
+                            h2 {
+                                font-size: 1rem;
+                                color: $text-W;
+                            }
+                        }
+                        .overview-today__cards--stats {
+                            display: flex;
+                            justify-content: space-between;
+                            
+                            div {
+                                display: flex;
+                                align-items: center;
+                                
+                                span {
+                                    color: $limeGreen;
+                                    font-weight: 800;
+                                    font-size: .875rem;
+                                    margin-left: .225rem;
+                                }
+                            }
+                        }
+    
+                        &:nth-of-type(2),
+                        &:nth-of-type(6),
+                        &:last-of-type {
+                            .overview-today__cards--stats{
+                                div{
+                                    span{
+                                        color: $brightRed;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+.dark {
+    background-color: $veryDarkBlue-BG;
+    .container {
+        header {
+            .header--title {
+                h1 {
+                    color: $wText-D;
+                }
+                h2 {
+                    color: $darkTtext;
+                }
+            }
+            .header--btn {
+                h2 {
+                    color: $darkTtext;
+                }
+            }
+        }
+        main {
+            .total-stats {
+                .card {
+                    background-color: $CardBG-D;
+
+                    .card--name {
+                        span {
+                            color: $darkTtext;
+                        }
+                    }
+                    .card--folowrs {
+                        p {
+                            color: $wText-D;
+                        }
+                        h3 {
+                            color: $darkTtext;
+                        }
+                    }
+                    
+                }
+            }
+            .overview-today {
+                .overview-today__title {
+                    h2 {
+                        color: $wText-D;
+                    }
+                }
+                .overview-today__cards {
+                    .overview-today__cards--card {
+                        background-color: $CardBG-D;
+    
+                        .overview-today__cards--title {
+                            h2 {
+                                color: $darkTtext;
+                            }
+                        }
+                        .overview-today__cards--stats {
+                            h2 {
+                                color: $wText-D;
+                            }
+                        }
+                        
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    body {
+        padding: 2rem 4rem;
+        .container {
+            header {
+                width: 100%;
+                flex-direction: row;
+                min-height: 10vh;
+                align-items: center;
+                margin-bottom: 4rem;
+                
+                .header--title {
+                    border-bottom: unset;
+                    margin-bottom: unset;
+                    h1{
+                        font-size: 2.725rem;
+                    }
+                    h2 {
+                        font-size: 1em;
+                    }
+                }
+                .header--btn {
+                    justify-content: flex-end;
+                    width: 30%;
+                    .btn {
+                        flex-grow: unset;
+                        margin-left: .5rem;
+                    }
+                    h2{
+                        flex-grow: unset;
+                        font-size: 1rem;
+                    }
+                }
+            }
+            main {
+                width: 100%;
+
+                .total-stats {
+                    display: flex;
+                    justify-content: space-between;
+                    
+                    .card {
+                        width: 22.5%;
+                        flex-wrap: unset;
+                        flex-grow: unset;
+                        min-height: 30vh;
+                        border-radius: .5rem;
+
+                        .card--name {
+                            img {
+                                width: 1.5rem;
+                            }
+                            span {
+                                font-size: 1rem;
+                            }
+                            
+                        }
+                        .card--folowrs {
+                            p {
+                                font-size: 5rem;
+                            }
+                            h3 {
+                                font-size: 1rem;
+                            }
+                        }
+                        &:hover {
+                            background-color: hsl(225, 17%, 91%);
+                        }
+                    }
+                }
+                .overview-today {
+                    .overview-today__cards {
+                        width: 100%;
+                        flex-direction: row;
+                        flex-wrap: wrap;
+                        justify-content: space-between;
+                        border-radius: .5rem;
+
+                        .overview-today__cards--card {
+                            width: 22.5%;
+                            margin-bottom: 2rem;
+
+                            &:hover {
+                                background-color: hsl(225, 17%, 91%);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .dark {
+        background-color: $veryDarkBlue-BG;
+        .container {
+            header {
+                .header--title {
+                    h1 {
+                        color: $wText-D;
+                    }
+                    h2 {
+                        color: $darkTtext;
+                    }
+                }
+                .header--btn {
+                    h2 {
+                        color: $darkTtext;
+                    }
+                }
+            }
+            main {
+                .total-stats {
+                    .card {
+                        background-color: $CardBG-D;
+    
+                        .card--name {
+                            span {
+                                color: $darkTtext;
+                            }
+                        }
+                        .card--folowrs {
+                            p {
+                                color: $wText-D;
+                            }
+                            h3 {
+                                color: $darkTtext;
+                            }
+                        }
+                        &:hover {
+                            background-color: hsl(230, 20%, 34%);
+                        }
+                    }
+                }
+                .overview-today {
+                    .overview-today__title {
+                        h2 {
+                            color: $wText-D;
+                        }
+                    }
+                    .overview-today__cards {
+                        .overview-today__cards--card {
+                            background-color: $CardBG-D;
+        
+                            .overview-today__cards--title {
+                                h2 {
+                                    color: $darkTtext;
+                                }
+                            }
+                            .overview-today__cards--stats {
+                                h2 {
+                                    color: $wText-D;
+                                }
+                            }
+                            &:hover {
+                                background-color: hsl(230, 20%, 34%);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

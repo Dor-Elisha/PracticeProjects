@@ -1,0 +1,401 @@
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 3rem;
+  height: 1.5em;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #aeb3cb;
+  background-image: none;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 1rem;
+  width: 1rem;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-image: linear-gradient(to right, #378fe6, #3eda82);
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(1.5rem);
+  -ms-transform: translateX(1.5rem);
+  transform: translateX(1.5rem);
+  background-color: #1e202a;
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+*,
+*::before,
+*::after {
+  font-family: "Inter", sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  width: 100vw;
+  padding: 2rem;
+}
+body .container {
+  width: 100%;
+  position: relative;
+}
+body .container header {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0.5rem;
+  width: 100%;
+  min-height: 20vh;
+}
+body .container header .header--title {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  border-bottom: 1px solid gray;
+}
+body .container header .header--title h1 {
+  font-size: 1.525rem;
+}
+body .container header .header--title h2 {
+  font-size: 0.9rem;
+  color: #63687e;
+}
+body .container header .header--btn {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-grow: 2;
+}
+body .container header .header--btn h2 {
+  font-size: 0.825rem;
+  color: #63687e;
+  flex-grow: 1;
+}
+body .container header .header--btn .btn {
+  flex-grow: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+body .container main .total-stats {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+body .container main .total-stats .card {
+  width: 100%;
+  min-height: 30vh;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  border-radius: 0.225rem;
+  background-color: #f0f2fa;
+  margin-bottom: 2rem;
+}
+body .container main .total-stats .card .card--name {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .container main .total-stats .card .card--name img {
+  width: 1.5rem;
+  margin-right: 0.5rem;
+}
+body .container main .total-stats .card .card--name span {
+  font-size: 0.825rem;
+  font-weight: 800;
+  color: #63687e;
+}
+body .container main .total-stats .card .card--folowrs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body .container main .total-stats .card .card--folowrs p {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: #1e202a;
+}
+body .container main .total-stats .card .card--folowrs h3 {
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 1rem;
+  letter-spacing: 0.225rem;
+  color: #63687e;
+}
+body .container main .total-stats .card .card--today img {
+  width: 0.725rem;
+}
+body .container main .total-stats .card .card--today span {
+  font-size: 0.725rem;
+  font-weight: 800;
+  color: #1db489;
+}
+body .container main .total-stats .card:first-of-type {
+  border-top: #198ff5 5px solid;
+}
+body .container main .total-stats .card:nth-of-type(2) {
+  border-top: #1ca0f2 5px solid;
+}
+body .container main .total-stats .card:nth-of-type(3) {
+  border-top: #df4996 5px solid;
+}
+body .container main .total-stats .card:nth-of-type(4) {
+  border-top: #c4032a 5px solid;
+}
+body .container main .total-stats .card:nth-of-type(4) .card--today span {
+  color: #dc414c;
+}
+body .container main .overview-today {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+body .container main .overview-today .overview-today__title {
+  margin-bottom: 2.5rem;
+}
+body .container main .overview-today .overview-today__title h2 {
+  color: #63687e;
+}
+body .container main .overview-today .overview-today__cards {
+  display: flex;
+  flex-wrap: wrap;
+}
+body .container main .overview-today .overview-today__cards .overview-today__cards--card {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 3.5rem;
+  background-color: #f0f2fa;
+  border-radius: 0.225rem;
+  padding: 1rem;
+}
+body .container main .overview-today .overview-today__cards .overview-today__cards--card .overview-today__cards--title {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+body .container main .overview-today .overview-today__cards .overview-today__cards--card .overview-today__cards--title h2 {
+  font-size: 1rem;
+  color: #63687e;
+}
+body .container main .overview-today .overview-today__cards .overview-today__cards--card .overview-today__cards--stats {
+  display: flex;
+  justify-content: space-between;
+}
+body .container main .overview-today .overview-today__cards .overview-today__cards--card .overview-today__cards--stats div {
+  display: flex;
+  align-items: center;
+}
+body .container main .overview-today .overview-today__cards .overview-today__cards--card .overview-today__cards--stats div span {
+  color: #1db489;
+  font-weight: 800;
+  font-size: 0.875rem;
+  margin-left: 0.225rem;
+}
+body .container main .overview-today .overview-today__cards .overview-today__cards--card:nth-of-type(2) .overview-today__cards--stats div span, body .container main .overview-today .overview-today__cards .overview-today__cards--card:nth-of-type(6) .overview-today__cards--stats div span, body .container main .overview-today .overview-today__cards .overview-today__cards--card:last-of-type .overview-today__cards--stats div span {
+  color: #dc414c;
+}
+
+.dark {
+  background-color: #1e202a;
+}
+.dark .container header .header--title h1 {
+  color: white;
+}
+.dark .container header .header--title h2 {
+  color: #8b97c6;
+}
+.dark .container header .header--btn h2 {
+  color: #8b97c6;
+}
+.dark .container main .total-stats .card {
+  background-color: #252a41;
+}
+.dark .container main .total-stats .card .card--name span {
+  color: #8b97c6;
+}
+.dark .container main .total-stats .card .card--folowrs p {
+  color: white;
+}
+.dark .container main .total-stats .card .card--folowrs h3 {
+  color: #8b97c6;
+}
+.dark .container main .overview-today .overview-today__title h2 {
+  color: white;
+}
+.dark .container main .overview-today .overview-today__cards .overview-today__cards--card {
+  background-color: #252a41;
+}
+.dark .container main .overview-today .overview-today__cards .overview-today__cards--card .overview-today__cards--title h2 {
+  color: #8b97c6;
+}
+.dark .container main .overview-today .overview-today__cards .overview-today__cards--card .overview-today__cards--stats h2 {
+  color: white;
+}
+
+@media only screen and (min-width: 1024px) {
+  body {
+    padding: 2rem 4rem;
+  }
+  body .container header {
+    width: 100%;
+    flex-direction: row;
+    min-height: 10vh;
+    align-items: center;
+    margin-bottom: 4rem;
+  }
+  body .container header .header--title {
+    border-bottom: unset;
+    margin-bottom: unset;
+  }
+  body .container header .header--title h1 {
+    font-size: 2.725rem;
+  }
+  body .container header .header--title h2 {
+    font-size: 1em;
+  }
+  body .container header .header--btn {
+    justify-content: flex-end;
+    width: 30%;
+  }
+  body .container header .header--btn .btn {
+    flex-grow: unset;
+    margin-left: 0.5rem;
+  }
+  body .container header .header--btn h2 {
+    flex-grow: unset;
+    font-size: 1rem;
+  }
+  body .container main {
+    width: 100%;
+  }
+  body .container main .total-stats {
+    display: flex;
+    justify-content: space-between;
+  }
+  body .container main .total-stats .card {
+    width: 22.5%;
+    flex-wrap: unset;
+    flex-grow: unset;
+    min-height: 30vh;
+    border-radius: 0.5rem;
+  }
+  body .container main .total-stats .card .card--name img {
+    width: 1.5rem;
+  }
+  body .container main .total-stats .card .card--name span {
+    font-size: 1rem;
+  }
+  body .container main .total-stats .card .card--folowrs p {
+    font-size: 5rem;
+  }
+  body .container main .total-stats .card .card--folowrs h3 {
+    font-size: 1rem;
+  }
+  body .container main .total-stats .card:hover {
+    background-color: #e4e6ec;
+  }
+  body .container main .overview-today .overview-today__cards {
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border-radius: 0.5rem;
+  }
+  body .container main .overview-today .overview-today__cards .overview-today__cards--card {
+    width: 22.5%;
+    margin-bottom: 2rem;
+  }
+  body .container main .overview-today .overview-today__cards .overview-today__cards--card:hover {
+    background-color: #e4e6ec;
+  }
+
+  .dark {
+    background-color: #1e202a;
+  }
+  .dark .container header .header--title h1 {
+    color: white;
+  }
+  .dark .container header .header--title h2 {
+    color: #8b97c6;
+  }
+  .dark .container header .header--btn h2 {
+    color: #8b97c6;
+  }
+  .dark .container main .total-stats .card {
+    background-color: #252a41;
+  }
+  .dark .container main .total-stats .card .card--name span {
+    color: #8b97c6;
+  }
+  .dark .container main .total-stats .card .card--folowrs p {
+    color: white;
+  }
+  .dark .container main .total-stats .card .card--folowrs h3 {
+    color: #8b97c6;
+  }
+  .dark .container main .total-stats .card:hover {
+    background-color: #454b68;
+  }
+  .dark .container main .overview-today .overview-today__title h2 {
+    color: white;
+  }
+  .dark .container main .overview-today .overview-today__cards .overview-today__cards--card {
+    background-color: #252a41;
+  }
+  .dark .container main .overview-today .overview-today__cards .overview-today__cards--card .overview-today__cards--title h2 {
+    color: #8b97c6;
+  }
+  .dark .container main .overview-today .overview-today__cards .overview-today__cards--card .overview-today__cards--stats h2 {
+    color: white;
+  }
+  .dark .container main .overview-today .overview-today__cards .overview-today__cards--card:hover {
+    background-color: #454b68;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

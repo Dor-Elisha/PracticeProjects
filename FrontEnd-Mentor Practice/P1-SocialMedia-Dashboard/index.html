@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="module" src="script.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="header--title">
+                <h1>Social Media Dashboard</h1>
+                <h2>Total Followers: 2,264</h2>
+            </div>
+            <div class="header--btn">
+                <h2 id="mode">Dark Mode</h2>
+                <div class="btn">
+                    <label class="switch">
+                        <input type="checkbox">
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+            </div>
+        </header>
+        <main>
+            <section class="total-stats">
+                <div class="card">
+                    <div class="card--name">
+                        <img src="./images/icon-facebook.svg" alt="facebook logo">
+                        <span>@DorElisha</span>
+                    </div>
+                    <div class="card--folowrs">
+                        <p>500</p>
+                        <h3>followers</h3>
+                    </div>
+                    <div class="card--today">
+                        <img src="./images/icon-up.svg" alt="up arrow">
+                        <span>4</span>
+                        <span>Today</span>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card--name">
+                        <img src="./images/icon-twitter.svg" alt="twitter logo">
+                        <span>@DorElisha</span>
+                    </div>
+                    <div class="card--folowrs">
+                        <p>342</p>
+                        <h3>followers</h3>
+                    </div>
+                    <div class="card--today">
+                        <img src="./images/icon-up.svg" alt="up arrow">
+                        <span>2</span>
+                        <span>Today</span>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card--name">
+                        <img src="./images/icon-instagram.svg" alt="instagram logo">
+                        <span>@DorElisha_</span>
+                    </div>
+                    <div class="card--folowrs">
+                        <p>603</p>
+                        <h3>followers</h3>
+                    </div>
+                    <div class="card--today">
+                        <img src="./images/icon-up.svg" alt="up arrow">
+                        <span>8</span>
+                        <span>Today</span>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card--name">
+                        <img src="./images/icon-youtube.svg" alt="youtube logo">
+                        <span>Dor Elisha.</span>
+                    </div>
+                    <div class="card--folowrs">
+                        <p>819</p>
+                        <h3>followers</h3>
+                    </div>
+                    <div class="card--today">
+                        <img src="./images/icon-down.svg" alt="down arrow">
+                        <span>72</span>
+                        <span>Today</span>
+                    </div>
+                </div>
+            </section>
+            <section class="overview-today">
+                <div class="overview-today__title">
+                    <h2>Overview - Today</h2>
+                </div>
+                <div class="overview-today__cards">
+                    <div class="overview-today__cards--card">
+                        <div class="overview-today__cards--title">
+                            <h2>Page Views</h2>
+                            <img src="images/icon-facebook.svg" alt="facebook icon">
+                        </div>
+                        <div class="overview-today__cards--stats">
+                            <h2>6</h2>
+                            <div>
+                                <img src="images/icon-up.svg" alt="up arrow"><span>3%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="overview-today__cards--card">
+                        <div class="overview-today__cards--title">
+                            <h2>Likes</h2>
+                            <img src="images/icon-facebook.svg" alt="facebook logo">
+                        </div>
+                        <div class="overview-today__cards--stats">
+                            <h2>53</h2>
+                            <div>
+                                <img src="images/icon-down.svg" alt="down arrow"><span>2%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="overview-today__cards--card">
+                        <div class="overview-today__cards--title">
+                            <h2>Likes</h2>
+                            <img src="images/icon-instagram.svg" alt="instagram logo">
+                        </div>
+                        <div class="overview-today__cards--stats">
+                            <h2>567</h2>
+                            <div>
+                                <img src="images/icon-up.svg" alt="up arrow"><span>339%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="overview-today__cards--card">
+                        <div class="overview-today__cards--title">
+                            <h2>Profile Views</h2>
+                            <img src="images/icon-instagram.svg" alt="instagram logo">
+                        </div>
+                        <div class="overview-today__cards--stats">
+                            <h2>9052</h2>
+                            <div>
+                                <img src="images/icon-up.svg" alt="up arrow"><span>175%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="overview-today__cards--card">
+                        <div class="overview-today__cards--title">
+                            <h2>Retweets</h2>
+                            <img src="images/icon-twitter.svg" alt="twitter logo">
+                        </div>
+                        <div class="overview-today__cards--stats">
+                            <h2>19</h2>
+                            <div>
+                                <img src="images/icon-up.svg" alt="up arrow"><span>7%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="overview-today__cards--card">
+                        <div class="overview-today__cards--title">
+                            <h2>Likes</h2>
+                            <img src="images/icon-twitter.svg" alt="twitter logo">
+                        </div>
+                        <div class="overview-today__cards--stats">
+                            <h2>36</h2>
+                            <div>
+                                <img src="images/icon-down.svg" alt="down arrow"><span>17%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="overview-today__cards--card">
+                        <div class="overview-today__cards--title">
+                            <h2>Likes</h2>
+                            <img src="images/icon-youtube.svg" alt="youtube logo">
+                        </div>
+                        <div class="overview-today__cards--stats">
+                            <h2>1057</h2>
+                            <div>
+                                <img src="images/icon-up.svg" alt="up arrow"><span>2254%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="overview-today__cards--card">
+                        <div class="overview-today__cards--title">
+                            <h2>Total Views</h2>
+                            <img src="images/icon-youtube.svg" alt="youtube logo">
+                        </div>
+                        <div class="overview-today__cards--stats">
+                            <h2>11k</h2>
+                            <div>
+                                <img src="images/icon-down.svg" alt="down arrow"><span>7%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer>
+
+        </footer>
+    </div>
+</body>
+
+</html>
